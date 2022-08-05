@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ddd;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px;
+}
+
+/* Container */
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+/* header */
+
+.header {
+    display: grid;
+    grid-template-areas: 
+        'hero hero feature-1'
+        'hero hero feature-2';
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 350px;
+    background-image: url(img/alam.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+.hero > * {
+    display: none;
+}
+
+.features {
+    background-color: #000;
+    color: white;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feature-1 {
+    grid-area: feature-1;
+    background-image: url(img/j.jpg);
+    background-size: cover;
+}
+
+.feature-2 {
+    grid-area: feature-2;
+    background-image: url(img/jan.jpg);
+    background-size: cover;
+}
+
+
+/* navigation */
+
+.menu {
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.menu .brand {
+    font-size: 1.3em;
+    color: #333;
+
+}
+
+.menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+}
+
+.menu a {
+    display: block;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        order: inherit;
+        grid-template-columns: 1fr;
+    }
+
+    .menu .brand {
+        display: none;
+    }
+
+    .hero > * {
+        display: block;
+        background-color: #000;
+        color: white;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
